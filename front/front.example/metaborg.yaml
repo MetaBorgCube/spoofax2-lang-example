@@ -1,0 +1,16 @@
+---
+id: org.example:front.example:0.1.0-SNAPSHOT
+name: front
+dependencies:
+  compile:
+  - org.example:front:0.1.0-SNAPSHOT
+runtime:
+  statix:
+    modes:
+      front: traditional # Duplicate from language definition
+    message-trace-length: 0
+    message-term-depth: 3
+    test-log: none # other options: error, warn, info, debug, trace (case-insensitive)
+    suppress-cascading-errors: true
+build:
+  useBuildSystemSpec: true

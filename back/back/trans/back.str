@@ -1,0 +1,15 @@
+module back
+
+imports
+  libstratego-lib
+  signatures/front-sig
+
+rules
+
+  compile-front:
+    (node, _, _, path, project-path) -> (filename, result)
+    with
+      filename := <guarantee-extension(|"aterm")> path
+    ; result   := <debug(!"a"); compile> node
+
+  compile: Front() -> ("Front", "Compiled")

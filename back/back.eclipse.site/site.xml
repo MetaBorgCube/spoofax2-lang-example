@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/back.eclipse.feature_0.1.0.qualifier.jar" id="back.eclipse.feature" version="0.1.0.qualifier">
+      <category name="back"/>
+   </feature>
+   <category-def name="back" label="back language Eclipse plugin">
+      <description>
+         back language Eclipse plugin.
+      </description>
+   </category-def>
+</site>

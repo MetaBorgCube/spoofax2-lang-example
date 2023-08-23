@@ -1,0 +1,7 @@
+module test
+
+language front
+
+test parse [[
+front
+]] parse succeeds

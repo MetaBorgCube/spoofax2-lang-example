@@ -1,0 +1,24 @@
+module statics
+
+// see README.md for details on how to switch to multi-file analysis
+
+rules // single-file entry point
+
+  programOk : Start
+
+  programOk(Front()).
+
+rules // multi-file entry point
+
+  projectOk : scope
+
+  projectOk(s).
+
+  fileOk : scope * Start
+
+  fileOk(s, Front()).
+
+signature
+
+  sorts Start constructors
+    Front : Start

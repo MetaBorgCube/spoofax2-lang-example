@@ -1,0 +1,9 @@
+---
+id: org.example:front.test:0.1.0-SNAPSHOT
+name: front
+dependencies:
+  compile:
+  - org.example:front:0.1.0-SNAPSHOT
+  - org.metaborg:org.metaborg.meta.lang.spt:${metaborgVersion}
+build:
+  useBuildSystemSpec: true
