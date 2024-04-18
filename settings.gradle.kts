@@ -26,3 +26,6 @@ fun String.includeProject(id: String, path: String = "$this/$id") {
 "back".run {
   includeProject("back")
 }
+"java".run {
+  includeProject("parse")
+}

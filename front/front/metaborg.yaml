@@ -19,6 +19,7 @@ language:
     enabled: true
     pretty-print: front
     sdf2table: java
+    jsglr-version: v2
     placeholder:
       prefix: "$"
   stratego:
