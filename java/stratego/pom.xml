@@ -5,7 +5,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.example</groupId>
-    <artifactId>parse</artifactId>
+    <artifactId>stratego</artifactId>
     <packaging>jar</packaging>
     <version>0.1.0</version>
 
@@ -16,15 +16,27 @@
     <dependencies>
         <dependency>
             <groupId>org.metaborg</groupId>
-            <artifactId>org.spoofax.jsglr2</artifactId>
+            <artifactId>org.spoofax.terms</artifactId>
             <version>${metaborg-version}</version>
         </dependency>
         <dependency>
             <groupId>org.metaborg</groupId>
-            <artifactId>org.metaborg.parsetable</artifactId>
+            <artifactId>org.strategoxt.strj</artifactId>
             <version>${metaborg-version}</version>
         </dependency>
+        <dependency>
+            <groupId>front.trans</groupId>
+            <artifactId>front</artifactId>
+            <version>0.1.0</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>Local Repository with Stratego code from Front</id>
+            <url>file://${basedir}/repo</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -57,6 +69,14 @@
                         </transformer>
                     </transformers>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>*.jar</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
                 </configuration>
             </plugin>
         </plugins>

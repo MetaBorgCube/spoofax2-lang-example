@@ -17,3 +17,12 @@ rules // Debugging
     with
       filename := <guarantee-extension(|"aterm")> path
     ; result   := node
+
+signature
+  constructors
+    FrontDesugared : Start
+
+rules
+
+  desugar: Front() -> FrontDesugared()
+

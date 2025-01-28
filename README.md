@@ -5,6 +5,10 @@ Contains two extremely simple languages:
 - `front`: default Spoofax 2 project, with the start constructor changed to `Front`.
 - `back`: not a real language, but just extends `front`. Has a source dependency to `front`, and adds a 'Compile' builder to it.
 
+In the `java` directory are Java projects that take a slice of one of the Spoofax 2 language projects, and runs it separately:
+- `java/parse`: demonstrates running just the parser based on the grammar in `front`.
+- `java/stratego`: demonstrates running just a Stratego strategy from `front` on an abstract syntax tree.
+
 ## Maven Build
 
 Requires Maven to be installed.
