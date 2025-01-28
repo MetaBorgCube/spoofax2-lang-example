@@ -6,4 +6,4 @@ Then build with Maven, and run `java -jar target/stratego-0.1.0.jar` to see the 
 
 ## Limitations
 
-Note that if you use Stratego code from `libspoofax` in your Spoofax project, the compiled Stratego code may attempt to call into the Spoofax ecosystem. However, since this example code is attempting to show minimal Java dependencies, it does not depend on and start up Spoofax Core in the background. Therefore, if you Stratego code in the way presented here, it may fail at run time when attempting to call into Spoofax. This will likely result in a `StrategoException("Primitive not defined: " + name)`. 
+Note that if you use Stratego code from `libspoofax` in your Spoofax project, the compiled Stratego code may attempt to call into the Spoofax ecosystem. However, since this example code is attempting to show minimal Java dependencies, it does not depend on and start up Spoofax Core in the background. Therefore, if you run Stratego code in the way presented here, it may fail at run time when attempting to call into Spoofax. This will likely result in a `StrategoException("Primitive not defined: " + name)`. 
