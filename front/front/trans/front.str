@@ -26,3 +26,5 @@ rules
 
   desugar: Front() -> FrontDesugared()
 
+  desugar-otf: f -> f' where [f'] := <bottomup(try(desugar))> [f]
+
